@@ -1,0 +1,509 @@
+# Instincts generated from https://github.com/skalingclouds/ThesysExamples
+# Generated: 2026-03-13T10:39:02.289Z
+# Version: 2.0
+
+---
+id: ThesysExamples-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 169 commits
+
+---
+id: ThesysExamples-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: ThesysExamples-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: ThesysExamples-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: 
+
+---
+id: ThesysExamples-workflow-database-migration
+trigger: "when modifying the database schema or adding tables"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow Database Migration
+
+## Action
+
+Follow the database-migration workflow:
+1. Create migration file
+2. Update schema definitions
+3. Generate/update types
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: migrations/*, **/schema.*
+
+---
+id: ThesysExamples-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~7x per month
+- Files: mastra/*, mastra/src/app/api/chat/*, mastra/src/app/*
+
+---
+id: ThesysExamples-workflow-new-nextjs-project-setup
+trigger: "when doing new nextjs project setup"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow New Nextjs Project Setup
+
+## Action
+
+Follow the new-nextjs-project-setup workflow:
+1. Create project configuration files (.gitignore, package.json, tsconfig.json)
+2. Set up Next.js configuration and build tools (next.config.ts, eslint.config.mjs, postcss.config.mjs)
+3. Create basic app structure (layout.tsx, page.tsx, globals.css)
+4. Add C1Chat API route (src/app/api/chat/route.ts)
+5. Include public assets and favicon
+6. Set up environment configuration
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: */README.md, */package.json, */package-lock.json
+
+---
+id: ThesysExamples-workflow-iterative-ui-development
+trigger: "when doing iterative ui development"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow Iterative Ui Development
+
+## Action
+
+Follow the iterative-ui-development workflow:
+1. Make targeted component changes (components.tsx)
+2. Adjust styling for specific features (globals.css)
+3. Test and commit incremental improvements
+4. Repeat cycle for different UI aspects
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: */src/app/components.tsx, */src/app/globals.css, */src/app/page.tsx
+
+---
+id: ThesysExamples-workflow-dependency-updates
+trigger: "when doing dependency updates"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow Dependency Updates
+
+## Action
+
+Follow the dependency-updates workflow:
+1. Update package.json with new dependency versions
+2. Regenerate package-lock.json
+3. Update API routes to use new model endpoints or configurations
+4. Test and adjust for breaking changes
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: */package.json, */package-lock.json, */src/app/api/chat/route.ts
+
+---
+id: ThesysExamples-workflow-c1chat-api-integration
+trigger: "when doing c1chat api integration"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow C1chat Api Integration
+
+## Action
+
+Follow the c1chat-api-integration workflow:
+1. Create core API chat route
+2. Add message storage system (messageStore.ts)
+3. Implement tool definitions (tools.ts)
+4. Add context management (TableContext.tsx or similar)
+5. Set up specialized API endpoints (/table, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: */src/app/api/chat/route.ts, */src/app/api/chat/messageStore.ts, */src/app/api/chat/tools.ts
+
+---
+id: ThesysExamples-workflow-project-restructuring
+trigger: "when doing project restructuring"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/ThesysExamples
+---
+
+# ThesysExamples Workflow Project Restructuring
+
+## Action
+
+Follow the project-restructuring workflow:
+1. Remove entire old project directories with all files
+2. Create new project structure with updated names
+3. Migrate and refactor existing code to new structure
+4. Update configurations for new project layout
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: Multiple complete directory removals, Multiple complete directory additions, All project configuration files
+
+---
+id: thesysexamples-camel-case-files
+trigger: "When creating new files in TypeScript projects"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Camel Case Files
+
+## Action
+
+Use camelCase naming convention for file names
+
+## Evidence
+
+- Pattern seen across all config files
+- Consistent with TypeScript language conventions in repository
+
+---
+id: thesysexamples-pascal-case-classes
+trigger: "When defining classes in TypeScript"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Pascal Case Classes
+
+## Action
+
+Use PascalCase naming convention for class names
+
+## Evidence
+
+- Standard TypeScript convention observed in codebase
+- Consistent across multiple projects
+
+---
+id: thesysexamples-screaming-snake-constants
+trigger: "When defining constants in TypeScript"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Screaming Snake Constants
+
+## Action
+
+Use SCREAMING_SNAKE_CASE naming convention for constants
+
+## Evidence
+
+- Consistent naming convention pattern across repository
+- Standard TypeScript practice
+
+---
+id: thesysexamples-try-catch-errors
+trigger: "When handling errors in TypeScript code"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Try Catch Errors
+
+## Action
+
+Use try-catch blocks for error handling
+
+## Evidence
+
+- Error handling style pattern detected
+- No custom error classes or boundaries found
+
+---
+id: thesysexamples-freeform-commits
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Freeform Commits
+
+## Action
+
+Write commit messages in freeform style without strict prefixes, average 39 characters
+
+## Evidence
+
+- fix: sheet copilot deploy
+- working with editable sheet
+- update to latest model
+- Remove build check workflow configuration from GitHub Actions
+
+---
+id: thesysexamples-new-nextjs-setup
+trigger: "When someone wants to create a new C1Chat-powered Next.js application"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples New Nextjs Setup
+
+## Action
+
+Create complete project structure with package.json, tsconfig.json, Next.js config, app structure, and C1Chat API route
+
+## Evidence
+
+- 8 instances of complete Next.js project creation
+- Consistent file patterns across projects
+- Standard boilerplate setup repeated
+
+---
+id: thesysexamples-iterative-ui-commits
+trigger: "When someone is actively developing and refining a user interface"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Iterative Ui Commits
+
+## Action
+
+Make small, targeted commits focusing on components.tsx, globals.css, and page.tsx files
+
+## Evidence
+
+- 6 instances per month of UI refinement
+- Consistent pattern of small incremental changes
+- Focus on specific UI files
+
+---
+id: thesysexamples-bump-dependencies
+trigger: "When someone needs to update project dependencies to latest versions"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Bump Dependencies
+
+## Action
+
+Update package.json, regenerate package-lock.json, and update API routes for model endpoints
+
+## Evidence
+
+- Bump deps and update system prompt
+- 4 instances per month
+- Consistent pattern of dependency updates with API changes
+
+---
+id: thesysexamples-c1chat-advanced-setup
+trigger: "When someone wants to add advanced C1Chat capabilities with tools and persistence"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples C1chat Advanced Setup
+
+## Action
+
+Create messageStore.ts, tools.ts, context management, and specialized API endpoints
+
+## Evidence
+
+- 5 instances per quarter
+- Consistent file patterns for advanced C1Chat integration
+- Standard tool and storage setup
+
+---
+id: thesysexamples-project-restructure
+trigger: "When someone wants to reorganize project structure or rename projects"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Project Restructure
+
+## Action
+
+Remove old directories completely, create new structure with updated names, migrate code
+
+## Evidence
+
+- rename c1-custom-components to custom-chat-ui
+- 3 instances per quarter
+- Pattern of complete directory restructuring
+
+---
+id: thesysexamples-single-package-structure
+trigger: "When organizing a repository with multiple examples"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Single Package Structure
+
+## Action
+
+Use single-package structure with type-based module organization and mixed test locations
+
+## Evidence
+
+- 10 separate project folders at root level
+- Each project is self-contained
+- No shared src layout across projects
+
+---
+id: thesysexamples-typescript-default
+trigger: "When creating new projects in this repository"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/ThesysExamples
+---
+
+# Thesysexamples Typescript Default
+
+## Action
+
+Use TypeScript as the primary language with tsconfig.json configuration
+
+## Evidence
+
+- All projects have tsconfig.json
+- TypeScript detected as primary language
+- Consistent TS configuration across projects
+
